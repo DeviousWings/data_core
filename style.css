@@ -1,0 +1,58 @@
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --darker: #1a1a1a;
+  --panel: #222222;
+  --border: #333333;
+  --silver: #c0c0c0;
+  --silver-dark: #888888;
+  --orange: #ff6600;
+  --orange-dark: #cc4400;
+  --orange-glow: rgba(255, 102, 0, 0.15);
+  --text: #e0e0e0;
+  --text-dim: #888888;
+  --success: #44aa44;
+  --error: #cc3333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--dark);
+  border: 1px solid var(--border);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px var(--orange-glow);
+}
+
+.ship-title { color: var(--orange); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px; }
+.ship-meta { color: var(--silver-dark); font-size: 0.9rem; }
+.status-badge { background-color: var(--darker); border: 1px solid var(--orange-dark); color: var(--orange); padding: 5px 10px; font-size: 0.8rem; text-transform: uppercase; }
+
+.dashboard-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; flex: 1; margin-bottom: 20px; }
+.panel { background-color: var(--panel); border: 1px solid var(--border); padding: 20px; display: flex; flex-direction: column; }
+.panel-title { color: var(--silver); font-size: 0.9rem; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+
+.telemetry-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem; }
+.label { color: var(--text-dim); }
+.val { color: var(--text); font-weight: 700; }
+.val.success { color: var(--success); }
+
+.terminal-box { background-color: var(--darker); border: 1px solid var(--border); flex: 1; padding: 15px; overflow-y: auto; font-size: 0.8rem; color: var(--silver); }
+footer { background-color: var(--dark); border: 1px solid var(--border); padding: 10px 15px; display: flex; align-items: center; }
+.cli-prompt { color: var(--orange); margin-right: 10px; font-weight: 700; }
+.cli-input { background: transparent; border: none; color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; outline: none; flex: 1; }
