@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK FORAGE // SHIP DATA CORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+
+    <header>
+        <div>
+            <div class="ship-title">BLACK FORAGE // CORE-01</div>
+            <div class="ship-meta">Vessel: USCS CUTTER'S WAKE (HULL-810)</div>
+        </div>
+        <div class="status-badge">SYSTEMS: NOMINAL</div>
+    </header>
+
+    <div class="dashboard-grid">
+        <div class="panel">
+            <div class="panel-title">Subsystem Telemetry</div>
+            <div id="telemetry-container"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">System Log & Diagnostics</div>
+            <div class="terminal-box" id="term-logs">
+                <p>[04:12:01] INITIALIZING KERNEL...</p>
+                <p>[04:12:04] BLACK FORAGE INDUSTRIAL PROTOCOLS LOADED.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <span class=cli-prompt">CMD></span>
+      <input type="text" id="cli-input" class=""cli-input placeholder="Enter command..." autofocus>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
